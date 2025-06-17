@@ -13,6 +13,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ViaCepService implements CepService {
 
+    // S - Single Responsibility Principle: Classe com responsabilidade única de integrar com o serviço ViaCep
+    // L - Liskov Substitution Principle: Implementa corretamente a interface CepService, podendo substituí-la
+    // O - Open/Closed Principle: Aberta para extensão (podemos adicionar novos métodos) mas fechada para modificação
+
     private static final Logger log = LoggerFactory.getLogger(ViaCepService.class);
     private final ViaCepClient viaCepClient;
 

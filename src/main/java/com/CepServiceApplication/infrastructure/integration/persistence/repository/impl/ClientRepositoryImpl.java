@@ -16,6 +16,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ClientRepositoryImpl implements IClientRepository {
 
+    // S - Single Responsibility Principle: Responsável apenas pela persistência de clientes
+    // L - Liskov Substitution Principle: Implementa corretamente a interface IClientRepository
+    // O - Open/Closed Principle: Aberta para extensão, fechada para modificação
+
     private final ClientJpaRepository clientJpaRepository;
     private final PersistenceMapper persistenceMapper;
 

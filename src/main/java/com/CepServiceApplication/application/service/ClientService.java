@@ -17,6 +17,11 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ClientService {
+
+    // S - Single Responsibility Principle: Esta classe tem a responsabilidade única de gerenciar operações relacionadas a clientes
+    // O - Open/Closed Principle: A classe está aberta para extensão (podemos adicionar novos métodos) mas fechada para modificação
+    // D - Dependency Inversion Principle: Depende de abstrações (IClientRepository, CepService) e não de implementações concretas
+    
     private static final Logger log = LoggerFactory.getLogger(ClientService.class);
     private final IClientRepository clientRepository;
     private final CepService cepService;

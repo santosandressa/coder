@@ -25,6 +25,10 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @Slf4j
 public class ClientController {
 
+    // S - Single Responsibility Principle: Responsável apenas pela persistência de clientes
+    // L - Liskov Substitution Principle: Implementa corretamente a interface IClientRepository
+    // O - Open/Closed Principle: Aberta para extensão, fechada para modificação
+
     private final ClientService clientService;
 
     @GetMapping
